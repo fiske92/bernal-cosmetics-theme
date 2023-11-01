@@ -1,0 +1,20 @@
+.info-card {
+    box-shadow: 4px 4px 5px #64129420;
+    padding: 25px 15px;
+    transition: .3s all;
+
+    &:hover {
+    box-shadow: 6px 6px 15px #64129433;
+
+    }
+
+    & > div {
+        flex-wrap: nowrap !important;
+
+        & > div.wp-block-column.img-container {
+            @media (max-width: 575.98px) {
+                flex-basis: 30% !important;
+            }
+        }
+    }
+}

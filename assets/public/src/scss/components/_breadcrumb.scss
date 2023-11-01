@@ -1,0 +1,20 @@
+.woocommerce-pagination {
+    .page-numbers {
+        li {
+            border: 1px solid $primary !important;
+            border-radius: 3px;
+
+            span.current {
+                background-color: $primary !important;
+            }
+
+            a {
+                &:hover,
+                &:active,
+                &:focus {
+                    background-color: lighten($color: $primary, $amount: 40%) !important;
+                }
+            }
+        }
+    }
+}

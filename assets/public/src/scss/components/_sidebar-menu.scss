@@ -1,0 +1,84 @@
+#secondary {
+    padding-right: 30px !important;
+
+    @media (max-width: 575.98px) {
+        padding-right: 0 !important;
+    }
+
+    .sidebar-main {
+            position: sticky;
+            top: 65px;
+            background: #fff;
+            border-radius: 3px;
+            box-shadow: 2px 5px 4px #65129424;
+            padding: 15px;
+
+            h3 {
+                font-weight: 600;
+                background-image: linear-gradient(to left, #553c9a, #b393d3);
+                color: transparent;
+                background-clip: text;
+                -webkit-background-clip: text;
+            }
+
+            ul.wp-block-latest-posts {
+                padding-left: 30px;
+                list-style-type: disc;
+                
+                ::marker {
+                    color: $primary;
+                }
+            }
+
+            ul.wc-block-grid__products {
+                li {
+                    max-width: 100%;
+                    text-align: center;
+                    background-color: $content-bg;
+                    max-width: 90%;
+                    margin: 0 auto;
+                    position: relative;
+                    border: 0;
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        width: 30px;
+                        height: 30px;
+                        border-right: 1px solid $primary;
+                        border-top: 1px solid $primary;
+                    }
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 30px;
+                        height: 30px;
+                        border-bottom: 1px solid $primary;
+                        border-left: 1px solid $primary;
+                    }
+
+                    .wc-block-grid__product-title {
+                        font-weight: 700;
+                    }
+
+                    .wc-block-grid__product-price {
+                        color: $primary;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+
+                    img {
+                        width: 70% !important;
+                        margin: 0 auto;
+                    }
+                }
+            }
+    }
+}

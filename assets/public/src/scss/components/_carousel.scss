@@ -1,0 +1,109 @@
+#carouselExampleDark {
+    height: 430px;
+
+    .carousel-indicators {
+        button {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            background-color: $primary;
+            border: 3px solid $primary;
+            margin: 0 10px;
+
+            &[aria-current="true"] {
+                border: 3px solid $primary;
+                background-color: transparent;
+            }
+        }
+    }
+
+    .carousel-inner {
+        height: 430px;
+
+        .carousel-item {
+            height: 100%;
+
+            &::after {
+                content: '';
+                background-image: -webkit-linear-gradient(top,hsla(0,0%,97%,0),hsla(0,0%,97%,.8) 40%,#f7f7f7 90%);
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: -3px;
+                height: 55px;
+            }
+
+            img {
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(.7);
+
+                @media (max-width: 575.98px) {
+                    object-position: left;
+                }
+            }
+
+            .carousel-caption {
+                margin-left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                left: 0;
+                right: 0;
+                bottom: 0;
+                display: flex !important;
+                flex-direction: column;
+                justify-content: center;
+                color: #fff;
+                font-weight: 700;
+
+                @media (max-width: 575.98px) {
+                    margin-left: 0;
+                    transform: translateY(-50%);
+                }
+            }
+
+            &.video {
+                background: url('../img/cover-builder-milky-glitter.jpg') no-repeat center/cover;
+                
+                @media (max-width: 575.98px) {
+                    background: linear-gradient(180deg, $primary, $content-bg);
+                }
+    
+                video {
+                    height: 100%;
+                    width: 100%;
+                    margin: 0 auto;
+                }
+
+                .carousel-caption {
+                    width: auto;
+                    transform: translateX(50%);
+                    right: 50%;
+                    bottom: 20px;
+                    margin-left: 0;
+
+                    h5,
+                    p {
+                        background-color: #65129482;
+                        padding: 0 20px 20px 20px;
+                        
+                        @media (max-width: 575.98px) {
+                            width: 150%;
+                            margin-left: -25%;
+                            padding: 0 10px 10px 10px;
+                        }
+                    }
+
+                    h5 {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-control-prev,
+    .carousel-control-next {
+        display: none;
+    }
+}

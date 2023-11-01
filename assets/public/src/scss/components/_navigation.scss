@@ -1,0 +1,358 @@
+.nav-subscribe-form {
+    transition: .3s all;
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+
+    &.show {
+        opacity: 1;
+    }
+
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+
+    form {
+        & > p {
+            margin: 0 !important;
+            display: flex;
+            justify-content: center;
+
+            span[data-name="your-email"] {
+                flex-basis: 50%;
+
+                input {
+                    height: 35px;
+                    background-color: #fff;
+                }
+
+                & + br {
+                    display: none;
+                }
+            }
+
+            .wpcf7-submit {
+                height: 35px;
+                padding: .4rem 1.2rem;
+                margin-left: 10px;
+                background-color: $primary;
+                transition: .3s all;
+                
+                &:hover {
+                    background-color: lighten($color: $primary, $amount: 15%);
+                }
+            }
+
+            .wpcf7-spinner {
+                display: none;
+            }
+        }
+    }
+
+    .x {
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        top: 10%;
+        right: 5%;
+        cursor: pointer;
+
+        &::before {
+            content: '';
+            width: 3px;
+            height: 25px;
+            background-color: $primary;
+            position: absolute;
+            top: 10%;
+            right: 30%;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            content: '';
+            width: 3px;
+            height: 25px;
+            background-color: $primary;
+            position: absolute;
+            top: 10%;
+            right: 30%;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.before-nav {
+    z-index: 1;
+    box-shadow: 0px 0.2px 0.2px 0.2px #fff;
+
+    a {
+        &:hover {
+            color: lighten($color: $primary, $amount: 40%)
+        }
+    };
+
+    &__subscribe-btn {
+        background-color: lighten($color: $primary, $amount: 30%);
+        cursor: pointer;
+
+        svg {
+            fill: #fff;
+            stroke: lighten($color: $primary, $amount: 30%);
+            pointer-events: none;
+        }
+    }
+}
+
+.header-search-form {
+    &__form {
+        form {
+            height: 40px;
+
+            select {
+                padding-top: 0;
+                padding-bottom: 0;
+                border-radius: 0 !important;
+            }
+
+            button {
+                background: lighten($color: $primary, $amount: 30%);
+            }
+
+            input:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &__logo {
+        img {
+            height: 76px;
+            width: auto;
+        }
+    }
+
+    &__cart-btn {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 1px;
+            height: 30px;
+            background-color: lighten($color: $primary, $amount: 40%);
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+
+            @media (max-width: 575.98px) {
+                display: none;
+            }
+        }
+
+        span {
+            transition: .3s all;
+            
+            &:hover {
+                color: lighten($color: $primary, $amount: 40%) !important;
+            }
+        }
+
+        &__svg {
+            position: relative;
+
+            &::after {
+                content: attr(data-count-items);
+                background-color: lighten($color: $primary, $amount: 40%);
+                width: 15px;
+                height: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                top: -3px;
+                right: 7px;
+                padding: 10px;
+                font-size: 12px;
+                border-radius: 50%;
+                transition: .2s all;
+            }
+
+            &:hover {
+                &:after {
+                    transform: scale(1.15);
+                }
+            }
+        }
+    }
+
+    &__login {
+        a {
+            &:hover {
+                color: lighten($color: $primary, $amount: 40%) !important;
+            }
+        }
+    }
+}
+
+.main-header-menu {
+
+    li {
+        transition: .3s all;
+        // font-weight: 700;
+
+        &:hover {
+            a {
+                color: $primary !important;
+            }
+        }
+    }
+
+    & > li {
+        a {
+            color: $dark-1 !important;
+        }
+
+        &:first-child {
+            a {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .all-category {
+        position: relative;
+
+        a {
+            outline: none;
+            &::after {
+                content: url('../img/chevron-down.svg');
+                display: inline-block;
+                position: absolute;
+                right: -5px;
+                transition: .3s all;
+            }
+        }
+
+        &.show {
+            a {
+                color: $primary !important;
+
+                &::after {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+    }
+}
+
+.mega-menu {
+    border-bottom: 1px solid $border;
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s all;
+    outline: 0;
+    height: 0;
+    overflow: hidden;
+
+    li {
+        @media (min-width: 767.98px) {
+            flex: 1 1 0;
+        }
+    }
+
+    &.show {
+        visibility: visible;
+        opacity: 1;
+        overflow: visible;
+    }
+
+    .ast-container {
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 11px;
+            height: 11px;
+            position: absolute;
+            top: calc(-1.5rem - 6px);
+            left: 60px;
+            transform: rotate(45deg);
+            background: #fff;
+            z-index: 100;
+            border-top: 1px solid $border;
+            border-left: 1px solid $border;
+            transition: .3s all;
+        }
+    }
+
+    &__main-categories {
+        &__child-categories {
+            li {
+                margin: 0 15px 15px 0;
+                overflow: hidden;
+
+                a {
+                    position: relative;
+
+                    &::after {
+                        content: '';
+                        width: 100%;
+                        height: .5px;
+                        position: absolute;
+                        left: -100%;
+                        bottom: 0;
+                        background-color: $primary;
+                        transition: .3s all;
+                    }
+
+                    &:hover {
+                        &::after {
+                            left: 0;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+}
+
+// Astra header style
+.ast-primary-header-bar.ast-primary-header.main-header-bar.site-header-focus-item {
+    border-bottom: 1px solid $border;
+    background-color: $primary;
+    position: sticky;
+    top: 0;
+
+    li {
+        a {
+            color: #fff !important;
+        }
+    }
+}
+
+#ast-desktop-header {
+    position: relative;
+}
+
+header.site-header {
+    position: sticky;
+    top: 0;
+
+    #menu-mega-menu-mobile {
+        display: flex;
+
+        li:first-child {
+            margin-right: 15px;
+        }
+    }
+}
+
+.ast-main-header-wrap.main-header-bar-wrap {
+    & * {
+        border-bottom: 0 !important;
+    }
+} 

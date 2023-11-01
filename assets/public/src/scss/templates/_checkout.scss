@@ -1,0 +1,17 @@
+body.woocommerce-checkout {
+    .woocommerce {
+        .woocommerce-info {
+            display: none;
+        }
+
+        .woocommerce-privacy-policy-text {
+            display: none;
+        }
+    }
+
+    .button {
+        &:hover {
+            background-color: lighten($color: $primary, $amount: 40%);
+        }
+    }
+}

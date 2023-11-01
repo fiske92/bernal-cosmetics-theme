@@ -1,0 +1,33 @@
+body.woocommerce-shop {
+    #content {
+        background-color: rgb(247,247,247);
+
+        #secondary {
+            position: sticky;
+            top: 0;
+            border-left: 0;
+            padding: 0 0 0 30px;
+            padding-right: 0 !important;
+
+            @media (max-width: 575.98px) {
+                padding: 0;
+            }
+    
+            @media (min-width: 992px) {
+                margin-top: 2em;
+            }
+        }
+
+        #primary {
+            @media (min-width: 992px) {
+                margin-top: 2em;
+            }
+
+            a.add_to_cart_button {
+                background-color: $primary;
+                border-radius: 3px;
+            }
+        }
+    
+    }
+}

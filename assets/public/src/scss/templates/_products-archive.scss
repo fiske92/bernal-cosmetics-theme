@@ -1,0 +1,89 @@
+body.tax-product_cat {
+    #content {
+        background-color: rgb(247,247,247);
+
+        #primary {
+    
+            @media (min-width: 992px) {
+                margin-top: 2em;
+            }
+    
+            header.woocommerce-products-header {
+                position: relative !important;
+    
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: start;
+                height: 170px;
+                overflow: hidden;
+                transition: .3s all;
+
+                @media (max-width: 575.98px) {
+                    flex-wrap: nowrap;
+                    flex-direction: column;
+                    height: 100px;
+                }
+    
+                h1 {
+                    width: 100%;
+                    margin-bottom: .5em;
+                }
+
+                &.active {
+                    .term-description::after {
+                        bottom: -30px;
+                    }
+                }
+    
+                .term-description {
+                    flex-basis: 60%;
+
+                    &::after {
+                        content: '';
+                        background-image: -webkit-linear-gradient(top,hsla(0,0%,97%,0),hsla(0,0%,97%,.8) 40%,#f7f7f7 90%);
+                        position: absolute;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        height: 70px;
+                    }
+    
+                    & + div {
+                        flex-basis: 40%;
+                    }
+                }
+    
+            }
+
+            button.read-more {
+                &:hover {
+                    background-color: lighten($color: $primary, $amount: 40%);
+                }
+
+                &:focus {
+                    background-color: $primary;
+                }
+            }
+    
+            .products {
+                li {
+                    a.button {
+                        background-color: $primary !important;
+                        border-radius: 3px;
+                    }
+                }
+            }
+        }
+
+        #secondary {
+            border-left: 0;
+            padding: 0 0 0 30px;
+            padding-right: 0 !important;
+
+            @media (max-width: 575.98px) {
+                padding: 0;
+            }
+        }
+    }
+}

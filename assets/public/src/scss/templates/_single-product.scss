@@ -1,0 +1,108 @@
+body.single-product {
+    #content {
+        background-color: rgb(247,247,247);
+
+        #secondary {
+            border-right: 0;
+            border-left: 0;
+            padding: 0 0 0 30px;
+            padding-right: 0 !important;
+
+            @media (max-width: 575.98px) {
+                padding: 0;
+            }
+    
+            @media (min-width: 992px) {
+                margin-top: 2em;
+            }
+        }
+
+        #primary {
+            @media (min-width: 992px) {
+                margin-top: 2em;
+            }
+
+            a.add_to_cart_button {
+                background-color: $primary;
+                border-radius: 3px;
+            }
+
+            .woocommerce-product-gallery__image.flex-active-slide {
+                position: relative;
+                border-radius: 10% 0 10% 0 !important;
+                overflow: hidden;
+
+                &::after {
+                    content: '';
+                    width: 30%;
+                    height: 30%;
+                    border-top: 1px solid $primary;
+                    border-right: 1px solid $primary;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                }
+
+                &::before {
+                    content: '';
+                    width: 30%;
+                    height: 30%;
+                    border-left: 1px solid $primary;
+                    border-bottom: 1px solid $primary;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                }
+            }
+
+            .woocommerce-tabs,
+            .summary.entry-summary {
+                @media (max-width: 575.98px) {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    
+    }
+    
+    .ast-stock-detail {
+        display: none;
+    }
+
+    .product_meta {
+        display: none;
+    }
+
+    .wc-tabs {
+        .description_tab {
+            &::before {
+              background-color: $primary !important;  
+            }
+        }
+        .reviews_tab {
+            display: none !important;
+        }
+    }
+
+    .woocommerce-tabs {
+        padding-top: 0;
+    }
+
+    form {
+        button[name="add-to-cart"] {
+            background-color: $primary !important;
+            border-radius: 3px !important;
+        }
+
+        input.qty {
+            border: 1px solid $primary;
+        }
+    }
+
+    .astra-shop-summary-wrap {
+        a.add_to_cart_button {
+            background-color: $primary !important;
+            border-radius: 3px;
+        }
+    }
+}

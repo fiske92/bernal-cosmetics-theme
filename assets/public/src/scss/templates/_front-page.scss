@@ -1,0 +1,126 @@
+body.home {
+    #content {
+        background-color: $content-bg;
+        
+        .ast-container {
+            display: block !important;
+        }
+    }
+    
+    .cards-after-carousel {
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-wrap: nowrap !important;
+        position: relative;
+
+        & > div {
+            height: 260px;
+        }
+    
+        @media (min-width: 768px) and (max-width: 991.98px) {
+            & > div {
+                height: 230px !important;
+            }
+        }
+    
+        @media (max-width: 767.98px) {
+            & > div {
+                height: 210px !important;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 0;
+            height: 0;
+        }
+        
+        /* Hide scrollbar track for Webkit browsers (e.g., Chrome, Safari) */
+        &::-webkit-scrollbar-track {
+            display: none;
+        }
+        
+        /* Hide scrollbar thumb for Webkit browsers */
+        &::-webkit-scrollbar-thumb {
+            display: none;
+        }
+        
+        /* Hide scrollbar for Firefox */
+        scrollbar-width: none;
+    
+        .wp-block-cover {
+            min-height: 310px;
+            display: flex;
+            align-items: start;
+            padding: 25px;
+    
+            .wp-block-button__link {
+                background-color: #fff;
+                border-radius: 3px;
+                color: $primary;
+            }
+    
+            h4 {
+                font-weight: 700;
+            }
+    
+            figure {
+                img {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                    z-index: -1;
+    
+                    @media (max-width: 575.98px) {
+                        bottom: -20px;
+                    }
+                }
+            }
+        }
+    
+        .card-after-carousel.wp-block-column {
+            border-radius: 3px;
+            // height: 100%;
+            transition: .3s all;
+    
+            img {
+                transition: .3s all;
+            }
+    
+            &:hover {
+                &:not(:last-child) {
+                    img {
+                        transform: rotate(5deg);
+                    }
+                }
+    
+                &:last-child {
+                    img {
+                        transform: scale(1.02);
+                    }
+                }
+            }
+    
+            @media (max-width: 991.98px) {
+                flex: 0 0 auto;
+                flex-basis: unset !important;
+                flex-grow: unset !important;
+                width: 40%;
+            }
+    
+            @media (max-width: 575.98px) {
+                width: 100%;
+            }
+    
+            .wp-block-cover {
+                height: 100%;
+                position: unset;
+            }
+        }
+    
+        .wp-block-column {
+            margin: 0 !important;
+            overflow: hidden;
+            position: relative;
+        }
+    }
+}
