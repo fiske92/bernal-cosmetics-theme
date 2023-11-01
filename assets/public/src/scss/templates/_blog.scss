@@ -1,0 +1,36 @@
+body.blog {
+    #primary {
+        @media (max-width: 575.98px) {
+            display: flex;
+            gap: 15px;
+        }
+
+        article {
+            @media (max-width: 575.98px) {
+                width: 50%;
+            }
+    
+            .blog-single-container {
+                .image-container {
+                    width: 140px;
+                    height: 140px;
+                    border-radius: 5px;
+                    background-size: cover;
+                }
+
+                .excerpt {
+                    text-decoration: none;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 3;
+                }
+            }
+
+            .read-more {
+                display: none;
+            }
+        }
+    }
+}

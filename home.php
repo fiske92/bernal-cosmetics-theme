@@ -25,13 +25,16 @@ get_header(); ?>
 <?php endif ?>
 	<div id="primary" <?php astra_primary_class(); ?>>
 		<?php
-		astra_primary_content_top();
 
-		astra_content_loop();
+		if (have_posts()) {
+			while (have_posts()) {
+				the_post();
+
+				get_template_part('loop-templates/content', 'blog');
+			}
+		}
 
 		astra_pagination();
-
-		astra_primary_content_bottom();
 		?>
 	</div><!-- #primary -->
 <?php

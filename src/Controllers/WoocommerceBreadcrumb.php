@@ -13,7 +13,7 @@ class WoocommerceBreadcrumb
         global $post;
     
         if ($crumbs[1][0] === 'Blog') {
-            $crumbs[1][1] = str_replace('/kategorija/', '/', $crumbs[1][1]);
+            $crumbs[1][1] = str_replace('/kategorija-proizvoda/', '/', $crumbs[1][1]);
         }
     
         return $crumbs;
