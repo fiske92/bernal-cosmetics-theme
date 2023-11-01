@@ -5,12 +5,18 @@ body.single {
         margin-top: 0 !important;
         padding-right: 30px;
 
+        @media (max-width: 575.98px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
         ul {
             list-style-type: disc;
         }
 
-        @media (max-width: 575.98px) {
-            padding-left: 0;
+        article {
+            background-color: transparent;
+            padding: 0;
         }
 
         header.entry-header {
