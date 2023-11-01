@@ -18,6 +18,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 get_header(); ?>
+
+<?php
+add_action('before_ast-container', function() {
+	echo "<h1 class='text-center'>Blog</h1>";
+});
+?>
+
 <?php if ( astra_page_layout() == 'left-sidebar' ) : ?>
 
 	<?php get_sidebar(); ?>

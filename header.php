@@ -72,5 +72,7 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 			</div>
 		<?php endif; ?>
 
+		<?php do_action('before_ast-container');?>
+
 		<div class="ast-container">
 		<?php astra_content_top(); ?>

@@ -32,3 +32,7 @@ function child_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
+
+add_action('before_ast-container', function() {
+	echo "<h1 class='text-center my-4'>Blog</h1>";
+});
