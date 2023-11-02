@@ -19,12 +19,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 get_header(); ?>
 
-<?php
-add_action('before_ast-container', function() {
-	echo "<h1 class='text-center'>Blog</h1>";
-});
-?>
-
 <?php if ( astra_page_layout() == 'left-sidebar' ) : ?>
 
 	<?php get_sidebar(); ?>
@@ -34,11 +28,13 @@ add_action('before_ast-container', function() {
 		<?php
 
 		if (have_posts()) {
+			?> <div class="posts-container"> <?php 
 			while (have_posts()) {
 				the_post();
 
 				get_template_part('loop-templates/content', 'blog');
 			}
+			?> </div> <?php
 		}
 
 		astra_pagination();
