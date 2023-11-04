@@ -4,7 +4,7 @@ body.single {
     #content {
         padding-top: 0 !important;
 
-        h1 {
+        & > h1 {
             position: relative;
             
             &::after {

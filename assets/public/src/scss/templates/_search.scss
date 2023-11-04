@@ -1,0 +1,11 @@
+body.search {
+    #primary {
+        display: block !important;
+
+        .nav-links {
+            .page-numbers:not(.current) {
+                color: $primary;
+            }
+        }
+    }
+}

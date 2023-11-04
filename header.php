@@ -67,9 +67,7 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 	<div id="content" class="site-content position-relative z-1 py-3 py-sm-0">
 
 		<?php if (is_single() && !is_product()): ?>
-			<div class="single-title">
-				<h1 class="text-center py-4 text-white"><?php the_title(); ?></h1>
-			</div>
+			<h1 class="text-center py-4 text-white"><?php the_title(); ?></h1>
 		<?php endif; ?>
 
 		<?php do_action('before_ast-container');?>

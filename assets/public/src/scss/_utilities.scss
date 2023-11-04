@@ -22,9 +22,14 @@
         animation: gradient 4s ease infinite;
         border-radius: 5px;
         color: #fff;
-        width: 100%;
         display: block;
+        width: fit-content;
+        padding: 0 15px;
         text-align: center;
+
+        @media (max-width: 575.98px) {
+            width: 100%;
+        }
     
         @keyframes gradient {
             0% {
