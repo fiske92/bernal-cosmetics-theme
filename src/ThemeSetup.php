@@ -6,6 +6,7 @@ use VanjaBeautyTheme\Controllers\BeforeNav;
 use VanjaBeautyTheme\Controllers\MegaMenu;
 use VanjaBeautyTheme\Controllers\WoocommerceArchive;
 use VanjaBeautyTheme\Controllers\WoocommerceBreadcrumb;
+use VanjaBeautyTheme\Controllers\CheckoutFields;
 use VanjaBeautyTheme\Admin\AboveNavCustomizer;
 use VanjaBeautyTheme\Admin\ThemeShortcodes;
 use VanjaBeautyTheme\Helpers\SrbLatin;
@@ -28,6 +29,7 @@ class ThemeSetup
         new WoocommerceArchive();
         new SrbLatin();
         new WoocommerceBreadcrumb();
+        new CheckoutFields();
     }
 
     public function enqueueScriptAndStyle()

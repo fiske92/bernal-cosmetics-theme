@@ -42,10 +42,12 @@
 <?php endif; ?>
 
 <div class="header-search-form">
+    <p class="fs-2 d-block d-md-none text-center brand mb-0">ŠPANSKI BRAND</p>
     <div class="ast-container d-flex justify-content-around align-items-center py-md-2 py-0">
         <a href="<?php echo esc_url(bloginfo('url')) ?>" class="header-search-form__logo">
             <img src="<?php echo esc_url($logo_url) ?>" alt="" width="150" height="150">
         </a>
+        <p class="fs-2 d-none d-md-block ms-5 mb-0 brand">ŠPANSKI BRAND</p>
         <div class="header-search-form__form flex-grow-1 px-md-5 px-2">
             <form 
                 role="search" 

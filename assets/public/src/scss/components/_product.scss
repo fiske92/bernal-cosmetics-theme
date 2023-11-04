@@ -4,6 +4,11 @@ ul.products {
         border-radius: 3px;
         box-shadow: 0px 0px 7px 2px #65129424;
         transition: .3s all;
+        padding: 10px !important;
+
+        & > div {
+            background-color: #fff;
+        }
 
         &:hover {
             box-shadow: 3px 3px 7px 5px #64129441;  
@@ -19,6 +24,32 @@ ul.products {
 
         .star-rating {
             display: none;
+        }
+
+        a.woocommerce-loop-product__link {
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 20px;
+                height: 20px;
+                border-right: 1px solid $primary;
+                border-top: 1px solid $primary;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border-left: 1px solid $primary;
+                border-bottom: 1px solid $primary;
+            }
         }
     }
 }
