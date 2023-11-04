@@ -1,6 +1,12 @@
 body.home {
     #content {
         background-color: $content-bg;
+
+        ul {
+            list-style-type: disc;
+            padding: inherit;
+            margin-left: 1em;
+        }
         
         .ast-container {
             display: block !important;

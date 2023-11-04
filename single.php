@@ -31,7 +31,7 @@ add_filter('next_post_link', 'remove_single_post_navigation_links');
 
 add_filter('the_content', function($content) {
     $breadcrumb = woocommerce_breadcrumb();
-    $featuredImage = get_the_post_thumbnail(null, 'medium');
+    $featuredImage = get_the_post_thumbnail(null, 'full');
     $publishedDate = get_the_date('d/m/Y');
     $objavljenoDana = '<span class="text-muted fs-7 published-date">Objavljeno dana ' . $publishedDate . '</span>';
     return $breadcrumb . $objavljenoDana . $featuredImage . $content;

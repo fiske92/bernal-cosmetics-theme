@@ -17,8 +17,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly.
 }
 
+add_filter( 'get_the_archive_title_prefix', '__return_empty_string' );
+
 add_action('before_ast-container', function() {
-	echo "<h1 class='text-center text-white py-4'>Blog</h1>";
+	echo "<h1 class='text-center text-white py-4'>" . get_the_archive_title() . "</h1>";
 });
 
 get_header(); ?>

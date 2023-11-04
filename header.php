@@ -68,7 +68,7 @@ if ( apply_filters( 'astra_header_profile_gmpg_link', true ) ) {
 
 		<?php if (is_single() && !is_product()): ?>
 			<div class="single-title">
-				<h1 class="text-center my-4"><?php the_title(); ?></h1>
+				<h1 class="text-center py-4 text-white"><?php the_title(); ?></h1>
 			</div>
 		<?php endif; ?>
 
