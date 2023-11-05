@@ -2,7 +2,7 @@
     window.addEventListener('DOMContentLoaded', () => {
         const burgerToggleBtn = document.querySelector('.menu-toggle.main-header-menu-toggle');
         const burgerMenuContainer = document.querySelector('.ast-mobile-header-content');
-        const offcanvasBackdrop = document.querySelector('.offcanvas-backdrop');
+        const offcanvasBackdrop = document.querySelector('.custom-offcanvas-backdrop');
 
         if (burgerToggleBtn) {
             const clonedButton = burgerToggleBtn.cloneNode(true);
@@ -15,8 +15,8 @@
         function showBurgerMenu() {
             clonedButton.classList.toggle('toggled');
             burgerMenuContainer.classList.toggle('active');
-            document.body.classList.toggle('offcanvas-backdrop-active');
             offcanvasBackdrop.classList.toggle('active');
+            document.body.classList.toggle('overflow-hidden');
         }
     })
 })();

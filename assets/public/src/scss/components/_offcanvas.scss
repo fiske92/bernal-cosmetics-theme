@@ -1,71 +1,67 @@
-html {
-    overflow-x: hidden;
-
-    body {
-        overflow-x: hidden;
-        &.offcanvas-backdrop-active {
-            overflow: hidden;
-        }
+body {
+    .custom-offcanvas-backdrop {
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+        background: $primary;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s all;
     
-        .offcanvas-backdrop {
-            width: 100vw;
-            height: 100vh;
-            position: absolute;
-            z-index: 2000;
-            background: $primary;
-            opacity: 0;
-            visibility: hidden;
-            transition: .5s all;
-        
-            &.active {
-                visibility: visible;
-                opacity: .5;
-            }
+        &.active {
+            visibility: visible;
+            opacity: .5;
         }
+    }
+    
+    header.site-header {
+        z-index: 2010;
+
+        #ast-mobile-header {
+            position: relative;
         
-        header.site-header {
-            z-index: 2010;
+            .ast-mobile-header-content {
+                margin-left: 100%;
+                background-color: $primary;
+                height: 100vh;
+                width: 0;
+                position: absolute;
+                display: flex;
+                transition: .5s all;
+                overflow: hidden;
+        
+                &.active {
+                    margin-left: 50%;
+                    width: 50%;
+                }
 
-            #ast-mobile-header {
-                position: relative;
-            
-                .ast-mobile-header-content {
-                    margin-left: 100%;
-                    background-color: $primary;
-                    height: 100vh;
-                    position: absolute;
-                    display: flex;
-                    transition: .5s all;
-            
-                    &.active {
-                        margin-left: 50%;
-                    }
+                .main-navigation {
+                    ul {
+                        background-color: $primary;
 
-                    .main-navigation {
-                        ul {
-                            background-color: $primary;
+                        li {
+                            a {
+                                color: #fff !important;
+                                font-weight: 700;
+                            }
 
-                            li {
+                            &.current-menu-item {
                                 a {
-                                    color: #fff !important;
-                                    font-weight: 700;
-                                }
-
-                                &.current-menu-item {
-                                    a {
-                                        color: $primary !important;
-                                    }
-                                }
-
-                                &:not(:last-child) {
-                                    border-bottom: 1px solid #fff;
+                                    color: $primary !important;
                                 }
                             }
-                        }
 
-                        .menu-link {
-                            white-space: nowrap;
+                            &:not(:last-child) {
+                                border-bottom: 1px solid #fff;
+                            }
                         }
+                    }
+
+                    .menu-link {
+                        white-space: nowrap;
                     }
                 }
             }
