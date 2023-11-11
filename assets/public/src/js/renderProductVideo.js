@@ -9,7 +9,10 @@
 
         if (videoUrl) {
             createVideoElement();
+            appendProductGallery();
+        }
 
+        function appendProductGallery() {
             if (!thumbnailGallery) {
                 const ol = document.createElement('ol');
                 ol.className = 'flex-control-nav flex-control-thumbs mt-3';
@@ -18,7 +21,6 @@
                 document.querySelector('.woocommerce-product-gallery').append(thumbnailGallery);
             }
 
-            
             const videoElement = document.createElement('video');
             const li = document.createElement('li');
             li.className = 'custom-thumbnail-img';
@@ -31,23 +33,16 @@
 
             li.appendChild(videoElement);
             thumbnailGallery.append(li);
-
         }
 
         function createVideoElement() {
             const videoContainer = document.getElementById('product-video__video');
-            const video = document.createElement('video');
-            const source = document.createElement('source');
-    
-            video.setAttribute('controls', true);
-            video.className = 'big-video';
 
-            source.setAttribute('type', 'video/mp4');
-            source.setAttribute('src', videoUrl);
+            let videoHTML = `<video controls="true" class="big-video">
+                <source type="video/mp4" src="${videoUrl}">
+                </video>`
 
-            video.append(source)
-
-            videoContainer.append(video);
+            videoContainer.innerHTML = videoHTML;
         }
 
         function toggleVideo(container) {

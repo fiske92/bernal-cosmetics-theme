@@ -30,9 +30,6 @@ if (function_exists('get_field')) {
 		<div class="product-video__container">
 			<span class="close-video">+</span>
 			<div class="video" id="product-video__video">
-				<!-- <video controls>
-					<source src="<?php echo $productVideoUrl; ?>" type="video/mp4">
-				</video> -->
 			</div>
 		</div>
 	</div>
