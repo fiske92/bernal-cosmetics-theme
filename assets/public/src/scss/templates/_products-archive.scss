@@ -86,4 +86,10 @@ body.tax-product_cat {
             }
         }
     }
+
+    &.paged {
+        header.woocommerce-products-header {
+            height: auto !important;
+        }
+    }
 }

@@ -25,6 +25,7 @@ class WoocommerceArchive
             is_product_category() 
             && isset($this->currentCategory->parent) 
             && $this->currentCategory->parent === 0
+            && !is_paged()
         ) {
             $imageID = get_term_meta($this->currentCategory->term_id, 'thumbnail_id', true);
             $imageUrl = wp_get_attachment_url($imageID);
@@ -44,6 +45,7 @@ class WoocommerceArchive
             is_product_category()
             && isset($this->currentCategory->parent) 
             && $this->currentCategory->parent === 0
+            && !is_paged()
         ) {
             echo "<button class='btn btn-primary text-white d-block py-1 px-2 m-auto fs-7 read-more mt-2'>Pročitaj Više</button>";
         }

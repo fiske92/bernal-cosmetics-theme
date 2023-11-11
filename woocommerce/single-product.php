@@ -19,7 +19,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
+if (function_exists('get_field')) {
+	$productVideo = get_field('product_video');
+	$productVideoUrl = isset($productVideo['url']) ? $productVideo['url'] : '';
+}
+?>
+
+<?php if ($productVideoUrl): ?>
+	<div class="product-video invisible opacity-0">
+		<div class="product-video__container">
+			<span class="close-video">+</span>
+			<div class="video" id="product-video__video">
+				<!-- <video controls>
+					<source src="<?php echo $productVideoUrl; ?>" type="video/mp4">
+				</video> -->
+			</div>
+		</div>
+	</div>
+<input type="hidden" value="<?php echo empty($productVideoUrl) ? '' : $productVideoUrl ?>" id="product-video">
+<?php endif; ?>
+<?php
 get_header( 'shop' ); ?>
+
 
 	<?php
 		/**
