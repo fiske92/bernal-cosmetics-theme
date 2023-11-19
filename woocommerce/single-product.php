@@ -26,14 +26,29 @@ if (function_exists('get_field')) {
 ?>
 
 <?php if ($productVideoUrl): ?>
+	<?php 
+		$productVideoUrl .= '#t=3';
+		$productTitle = get_the_title();
+		$integerPosition = strcspn($productTitle, '0123456789');
+		if ($integerPosition < strlen($productTitle)) {
+			$extractedTitle = substr($productTitle, 0, $integerPosition);
+			$productTitle = trim($extractedTitle);
+		}
+	?>
 	<div class="product-video invisible opacity-0">
-		<div class="product-video__container">
+		<div class="product-video__container flex-column border border-white">
 			<span class="close-video">+</span>
-			<div class="video" id="product-video__video">
+			<h2 class="text-white mb-3"><?php echo $productTitle; ?></h2>
+			<div class="video mb-3" id="product-video__video">
 			</div>
 		</div>
 	</div>
-<input type="hidden" value="<?php echo empty($productVideoUrl) ? '' : $productVideoUrl ?>" id="product-video">
+	<input 
+		type="hidden" 
+		value="<?php echo empty($productVideoUrl) ? '' : $productVideoUrl ?>" 
+		id="product-video"
+		data-title="<?php echo $productTitle; ?>"
+	>
 <?php endif; ?>
 <?php
 get_header( 'shop' ); ?>

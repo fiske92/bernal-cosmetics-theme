@@ -1,6 +1,6 @@
 (() => {
     window.addEventListener('load', () => {
-        const videoUrl = document.querySelector('#product-video') 
+        let videoUrl = document.querySelector('#product-video') 
             ? document.querySelector('#product-video').value
             : '';
         const productVideoContainer = document.querySelector('.product-video');
@@ -39,18 +39,20 @@
             const videoContainer = document.getElementById('product-video__video');
 
             let videoHTML = `<video controls="true" class="big-video">
-                <source type="video/mp4" src="${videoUrl}">
+                <source type="video/mp4" src="${videoUrl}#t=0.001">
                 </video>`
 
             videoContainer.innerHTML = videoHTML;
         }
 
         function toggleVideo(container) {
-            if (!container.classList.contains('invisible')) {
-                container.querySelector('video').pause();
-            }
+            !container.classList.contains('invisible')
+               ? container.querySelector('video').pause()
+               : container.querySelector('video').play();
             container.classList.toggle('invisible');
             container.classList.toggle('opacity-0');
         }
     })
 })();
+
+

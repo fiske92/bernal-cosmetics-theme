@@ -1,0 +1,22 @@
+#table-of-content-bc {
+    width: 50%;
+    margin: unset;
+
+    @media (max-width: 768.98px) {
+        width: 100%;
+    }
+
+    button {
+        &:focus {
+            box-shadow: unset !important;
+        }
+
+        &::after {
+
+        }
+    }
+
+    ul {
+        padding-left: 15px;
+    }
+}
