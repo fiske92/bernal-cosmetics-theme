@@ -1,0 +1,35 @@
+body.page:not(.home) {
+    h1 {
+        position: relative;
+        width: 100vw;
+        margin-bottom: 0;
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(to bottom, $primary, lighten($color: $primary, $amount: 20%), lighten($color: $primary, $amount: 40%), $content-bg);
+            z-index: -1;
+        }
+    }
+
+    #content {
+        @media (max-width: 575.98px) {
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+        }
+
+        & > .ast-container {
+            max-width: none;
+            padding: 0;
+        }
+
+        #primary {
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+}

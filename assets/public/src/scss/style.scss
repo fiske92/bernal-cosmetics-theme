@@ -16,6 +16,8 @@
 @import 'components/offcanvas';
 @import 'components/table-of-content';
 @import 'components/post-images';
+@import 'components/hero-section';
+@import 'components/footer';
 
 // Templates
 @import 'templates/front-page';
@@ -27,4 +29,19 @@
 @import 'templates/single';
 @import 'templates/blog';
 @import 'templates/search';
+@import 'templates/page';
+
+.skewed {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2c3e50;
+    z-index: 0;
+    transform: skewY(6deg);
+    transform-origin: top right;
+}
 

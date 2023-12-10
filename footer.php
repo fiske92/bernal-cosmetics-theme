@@ -18,7 +18,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div> <!-- ast-container -->
 	</div><!-- #content -->
-    <footer class="bg-content"><footer><p class="text-center">&copy; <strong>Bernal Cosmetics 2023</strong></p></footer>
+	<?php 
+	astra_content_after();
+		
+	astra_footer_before();
+		
+	astra_footer();
+		
+	astra_footer_after(); 
+?>
 	</div><!-- #page -->
 <?php 
 	wp_footer(); 
