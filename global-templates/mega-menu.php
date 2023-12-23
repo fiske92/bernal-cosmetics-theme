@@ -1,7 +1,7 @@
 <div class="mega-menu py-4 bg-content" tabIndex='-1'>
     <div class="ast-container mega-menu__container">
             <div class="me-5 featured-product">
-                <a href="<?php echo get_site_url() . '/product-category/bc-one' ?>">
+                <a href="<?php echo get_site_url() . '/kategorija-proizvoda/bc-one/' ?>">
                     <p class="fw-bold text-primary">BC One</p>
                     <div class="image-container">
                         <img src="<?php echo CHILD_THEME_URL . '/assets/public/dist/img/bc-one.jpg'; ?>" 
