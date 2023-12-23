@@ -1,17 +1,29 @@
 body.woocommerce-checkout {
-    .woocommerce {
-        .woocommerce-info {
-            display: none;
+    #primary {
+        padding-left: 60px;
+
+        @include media-breakpoint-down(sm) {
+            padding: 15px;
         }
 
-        .woocommerce-privacy-policy-text {
-            display: none;
+        .woocommerce {
+            .woocommerce-info {
+                display: none;
+            }
+    
+            .woocommerce-privacy-policy-text {
+                display: none;
+            }
+        }
+    
+        .button {
+            &:hover {
+                background-color: lighten($color: $primary, $amount: 40%);
+            }
         }
     }
-
-    .button {
-        &:hover {
-            background-color: lighten($color: $primary, $amount: 40%);
-        }
+    
+    #secondary {
+        border-left: 0;
     }
 }
