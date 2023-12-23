@@ -10,7 +10,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h3>BC One Sve U Jednom</h3>
         <p>Gel ukljucuje sve prednosti koje profesionalci žele u proizvodu</p>
-        <a href="<?php echo get_site_url() . '/product-category/bc-one/' ?>" class="carousel-caption__btn">
+        <a href="<?php echo get_site_url() . '/kategorija-proizvoda/bc-one/' ?>" class="carousel-caption__btn">
           <span class="btn btn-white text-primary fw-bold">Pročitaj Više</span>
         </a>
       </div>
@@ -22,7 +22,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Cover Builder</h5>
         <p>Naši cover gelovi su idealni za rekonstrukciju, izlivanje, prekrivanje i za tehniku bez turpijanja.</p>
-        <a href="<?php echo get_site_url() . '/product-category/bc-one/' ?>" class="carousel-caption__btn">
+        <a href="<?php echo get_site_url() . '/kategorija-proizvoda/builder-gel/' ?>" class="carousel-caption__btn">
           <span class="btn btn-white text-primary fw-bold">Pročitaj Više</span>
         </a>
       </div>
@@ -32,7 +32,7 @@
       <div class="carousel-caption d-none d-md-block">
         <h5>Easy Gel Lak</h5>
         <p>Široka i šarena paleta boja sa visokom koncentracijom pigmenata</p>
-        <a href="#" class="carousel-caption__btn">
+        <a href="<?php echo get_site_url() . '/kategorija-proizvoda/gel-lak/' ?>" class="carousel-caption__btn">
           <span class="btn btn-white text-primary fw-bold">Pročitaj Više</span>
         </a>
       </div>
