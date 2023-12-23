@@ -1,9 +1,21 @@
 body.woocommerce-checkout {
+    background-color: $content-bg;
+
     #primary {
         padding-left: 60px;
 
         @include media-breakpoint-down(sm) {
             padding: 15px;
+        }
+
+        header.entry-header {
+            display: none;
+        }
+
+        @include media-breakpoint-up(sm) {
+            .woocommerce-checkout {
+                margin-top: 30px;
+            }
         }
 
         .woocommerce {

@@ -21,6 +21,10 @@ body.woocommerce-cart {
             margin-top: 2em;
             padding: 0 60px;
 
+            header.entry-header {
+                display: none;
+            }
+
             @include media-breakpoint-down(sm) {
                 padding: 0;
             }
